@@ -12,6 +12,10 @@ The created backups can be browsed using SMB/NFS/... by the user.
 More information and screenshots at: http://forums.openmediavault.org/viewtopic.php?f=13&t=2726&p=18450#p18450
 
 
+WARNING: This modification hasn't been tested (as I don't know how to transform this content into a plugin package).
+This modification should add a checkbox which ask yo choose for differential backup or not
+
+
 Small Developing Guide
 ======
 
