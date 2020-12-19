@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the openmediavault-rsnapshot package.
-# 
+#
 # Translators:
 # clexanis, 2017
 # Christophe Lherieau <skimpax@gmail.com>, 2015
@@ -176,3 +176,6 @@ msgstr "Cette option spécifie le groupe auquel les répertoires de sauvegarde v
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "Should we do a differential backup"
+msgstr "Activer la sauvegarde différentielle ?"

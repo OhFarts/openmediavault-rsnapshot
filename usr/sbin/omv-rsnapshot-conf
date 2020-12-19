@@ -112,6 +112,14 @@ xmlstarlet sel -t \
 		sourcelabel=${mountpoint#/}
 	  fi
 
+    optionDiff="$(omv_config_get "${differential}")"
+
+    if [ optionDiff -eq "1" ]; then
+      varCommentDiff=""
+    else
+      varCommentDiff="#"
+    fi
+
 	  xmlstarlet sel -t -m "//services/rsnapshot/jobs/job[uuid='${uuid}']" \
 		-o "# rsnapshot-${uuid}.conf" -n \
 		-o "# This configuration file is auto-generated." -n \
@@ -132,6 +140,7 @@ xmlstarlet sel -t \
 		-i "string-length(cmd_preexec) > 0" -o "cmd_preexec		" -v "cmd_preexec" -n -b \
 		-i "string-length(cmd_postexec) > 0" -o "cmd_postexec		" -v "cmd_postexec" -n -b \
 		-o "cmd_rsync	/usr/bin/rsync" -n \
+    -o -v "onefs" "cmd_rsnapshot_diff /usr/bin/rsnapshot-diff" -n \
 		-o "cmd_logger	/usr/bin/logger" -n \
 		-o "logfile		${OMV_RSNAPSHOT_LOGFILE}" -n \
 		-o "rsync_long_args	" \

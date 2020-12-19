@@ -86,6 +86,10 @@
 			"cmd_postexec": {
 				"type": "string",
 				"required": false
+			},
+			"differential": {
+				"type": "boolean",
+				"default": true
 			}
 		}
 	}

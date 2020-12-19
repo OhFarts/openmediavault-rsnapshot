@@ -210,6 +210,11 @@ Ext.define('OMV.module.admin.service.rsnapshot.Job', {
                 ptype: 'fieldinfo',
                 text: _('Command to be run after rsnapshot execution.')
             }]
+        },{
+            xtype: 'checkbox',
+            name: 'differential',
+            fieldLabel: _('Should we do a differential backup'),
+            checked: true
         }];
     }
 });
